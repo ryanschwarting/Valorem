@@ -10,7 +10,7 @@ describe("NFTM arket", function () {
 
 
     const NFT = await ethers.getContractFactory("NFT");
-    const nft = await NFT.deploy();
+    const nft = await NFT.deploy(marketAddress);
     await nft.deployed(); //deploy the NFT contract
     const nftContractAddress = nft.address; //give us the nft address
 
