@@ -31,7 +31,7 @@ describe("NFTM arket", function () {
 
     const [_, buyerAddress] = await ethers.getSigners(); 
     
-    await market.connect(buyAddress).createMarketSale(nftContractAddress, 1, {value: auctionPrice});
+    await market.connect(buyerAddress).createMarketSale(nftContractAddress, 1, {value: auctionPrice});
 
     //fetch market items
     const items = await market.fetchMarketItems();
